@@ -57,7 +57,7 @@ body {
 .gamer-info__content {
    padding: 16px;
 
-   border-radius: 15px;
+   border-radius: 16px;
    background-color: var(--main-color);
 }
 
@@ -99,7 +99,7 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin: 26px auto;
+   margin: 26px auto 0;
    max-width: 200px;
 }
 
@@ -127,8 +127,10 @@ body {
 /* Nav */
 .nav__content {
    display: flex;
+   align-items: center;
    justify-content: space-around;
+   padding: 14px 0;
 
-   border-radius: 15px;
+   border-radius: 16px;
    background-color: var(--main-color);
 }
