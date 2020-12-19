@@ -52,6 +52,8 @@ header {
 .header__inner {
    display: flex;
    justify-content: space-between;
+
+   font-weight: 600;
 }
 
 .header__item {
@@ -90,6 +92,8 @@ nav {
 /* Gamer-info */
 .gamer-info__inner {
    padding: 0 25px;
+
+   font-weight: 400;
 }
 .gamer-info__suptitle {
    font-size: 12px;
@@ -133,7 +137,7 @@ nav {
 }
 
 .gamer-info__text {
-   padding-bottom: 5px;
+   margin-bottom: 12px;
 }
 
 .gamer-info__text:last-child {
@@ -172,6 +176,8 @@ nav {
 /* Message */
 .message__inner {
    padding: 25px;
+
+   font-weight: 600;
 }
 
 .message__content {
@@ -199,4 +205,110 @@ nav {
 .message__text {
    font-size: 14px;
    opacity: .5;
+}
+
+
+
+/* Account */
+.account {
+   padding: 25px;
+   
+   font-weight: 600;
+}
+
+.account__btn-edit {
+   width: 100%;
+   padding: 12px 0;
+   margin-bottom: 24px;
+
+   color: inherit;
+   font-size: inherit;
+   border: 0;
+   border-radius: 8px;
+
+   background-color: var(--main-color);
+}
+
+
+
+/* User */
+.user__content {
+   display: flex;
+   align-items: center;
+   margin-bottom: 16px;
+}
+
+.user__avatar {
+   width: 56px;
+   height: 56px;
+   margin-right: 16px;
+}
+
+.user__info {
+}
+
+.user__name {
+   font-size: 18px;
+}
+
+.user__status {
+   font-size: 12px;
+   font-weight: 300;
+   opacity: .5;
+}
+
+
+
+/* Games */
+.games__text {
+   font-weight: 600;
+}
+
+.preferred-games {
+   margin-bottom: 24px;
+}
+
+.games__items {
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: auto;
+   padding-top: 16px;
+}
+
+.preferred-games__item {
+   width: 48px;
+   height: 48px;
+   margin-right: 12px;
+}
+
+.preferred-games__item:last-child {
+   margin-right: 0;
+}
+
+.stat-games .games__items {
+   margin-bottom: 24px;
+}
+
+.stat-games__item {
+   padding: 8px 16px;
+   margin-right: 16px;
+
+   font-size: inherit;
+   font-weight: inherit;
+   color: inherit;
+
+   border: 0;
+   border-radius: 32px;
+   background-color: var(--main-color);
+}
+
+/* .stat-games__item .active {
+   border-radius: 16px;
+   background-color: var(--main-color);
+} */
+
+.stat-games__text {
+   margin-bottom: 12px;
+   
+   font-weight: 400;
 }
