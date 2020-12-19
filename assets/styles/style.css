@@ -298,17 +298,24 @@ nav {
    color: inherit;
 
    border: 0;
+   background-color: unset;
+}
+
+.stat-games__item-active {
    border-radius: 32px;
    background-color: var(--main-color);
 }
 
-/* .stat-games__item .active {
-   border-radius: 16px;
-   background-color: var(--main-color);
-} */
+.stat-games__content {
+   display: none;
+}
+
+.stat-games__content.active {
+   display: block;
+}
 
 .stat-games__text {
    margin-bottom: 12px;
-   
+
    font-weight: 400;
 }
