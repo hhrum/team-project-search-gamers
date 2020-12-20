@@ -153,3 +153,58 @@ nav {
 .message:last-child {
 			margin-bottom: 0;
 }
+
+.profile-info {
+			display: flex;
+			align-items: center;
+			justify-content: unset;
+}
+.profile-info .avatar {
+			width: 56px;
+			height: 56px;
+			margin-right: 16px;
+}
+.profile-info .text .name {
+			font-size: 18px;
+}
+.profile-info .text .status {
+			font-size: 12px;
+			font-weight: 300;
+			opacity: 0.5;
+}
+
+.profile-btn {
+			width: 100%;
+			padding: 12px 0;
+			margin: 16px 0 24px;
+			cursor: pointer;
+			font-size: inherit;
+			font-weight: inherit;
+			color: inherit;
+			border: 0;
+			border-radius: 8px;
+			background-color: #262A35;
+}
+
+.profile-games {
+			display: flex;
+			overflow-x: auto;
+			padding: 16px 0 24px;
+}
+.profile-games img {
+			width: 48px;
+			height: 48px;
+			margin-right: 12px;
+}
+.profile-games .item {
+			padding: 8px 16px;
+			border-radius: 32px;
+}
+.profile-games .item.active {
+			background-color: #262A35;
+}
+
+.stat-games .stat {
+			font-weight: 400;
+			margin-bottom: 12px;
+}

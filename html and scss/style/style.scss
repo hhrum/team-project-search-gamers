@@ -195,3 +195,68 @@ nav {
       margin-bottom: 0;
    }
 }
+
+
+
+// Profile
+
+.profile-info {
+   @include flexing(unset);
+
+   .avatar {
+      @include avatar(56px, 16px)
+   }
+
+   .text {
+      .name {
+         font-size: 18px;
+      }
+
+      .status {
+         font-size: 12px;
+         font-weight: 300;
+         opacity: .5;
+      }
+   }
+}
+
+.profile-btn {
+   width: 100%;
+   padding: 12px 0;
+   margin: 16px 0 24px;
+
+   cursor: pointer;
+   font-size: inherit;
+   font-weight: inherit;
+   color: inherit;
+
+   border: 0;
+   border-radius: 8px;
+   background-color: $content-bg;
+}
+
+.profile-games {
+   display: flex;
+   overflow-x: auto;
+   padding: 16px 0 24px;
+   
+   img {
+      @include avatar(48px, 12px);
+   }
+
+   .item {
+      padding: 8px 16px;
+      border-radius: 32px;
+
+      &.active {
+         background-color: $content-bg;
+      }
+   }
+}
+
+.stat-games {
+   .stat {
+      font-weight: 400;
+      margin-bottom: 12px;
+   }
+}
