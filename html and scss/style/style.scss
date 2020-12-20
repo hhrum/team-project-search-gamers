@@ -1,0 +1,159 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+// Переменные
+$main-p: 24px;
+$head-h: 75px;
+$nav-h: 60px;
+
+$main-fz: 16px;
+$small-fz: 12px;
+$main-fw: 600;
+
+$main-bg: #191A1F;
+$content-bg: #262A35;
+
+
+
+
+// Миксины
+@mixin flexing ($jc) {
+   display: flex;
+   align-items: center;
+   justify-content: $jc;
+}
+
+@mixin pos-fixed($t, $b, $h) {
+   position:fixed;
+   top:$t;
+   bottom: $b;
+   left:0;
+   right:0;
+   height: $h;
+}
+
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   color: #fff;
+   font-weight: $main-fw;
+
+   background-color: $main-bg;
+}
+
+
+header {
+   @include pos-fixed(0, unset, $head-h);
+   @include flexing(space-between);
+   padding: $main-p;
+   
+   .avatar {
+      width: 36px;
+      height: 36px;
+   }
+}
+
+.content {
+   @include pos-fixed(0, 0, none);
+   overflow-y: auto;
+   margin: $head-h 0 $nav-h;
+   padding: 0 $main-p;
+}
+
+nav {
+   @include pos-fixed(none, 0, $nav-h);
+   @include flexing(space-around);
+   margin: 24px;
+
+   border-radius: 16px;
+   background-color: $content-bg;
+}
+
+
+// Homepage
+
+.welcome {
+   font-weight: 400;
+
+   .text {
+      font-size: $small-fz;
+      opacity: .5;
+   }
+   .big-text {
+      font-size: 24px;
+   }
+}
+
+.gamers {
+   padding: 16px;
+   margin: 20px 0;
+
+   font-weight: 400;
+
+   border-radius: 16px;
+   background-color: $content-bg;
+
+   .account {
+      display: flex;
+      align-items: center;
+      margin-bottom: 150px;
+
+      .avatar {
+         margin-right: 12px;
+      }
+
+      .text {
+         .name {
+            font-size: 18px;
+         }
+
+         .games {
+            font-size: 14px;
+            opacity: .5;
+         }
+      }
+
+   }
+
+   .gamers-info {
+      .text {
+         margin-bottom: 10px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+
+      }
+   }
+}
+
+.buttons {
+   @include flexing(center);
+
+   button {
+      @include flexing(center);
+      width: 40px;
+      height: 40px;
+      margin-right: 24px;
+
+      cursor: pointer;
+
+      border: 0;
+      border-radius: 50%;
+      background-color: $content-bg;
+
+      &.btn-big {
+         width: 48px;
+         height: 48px;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}

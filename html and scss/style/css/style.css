@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+			box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+}
+
+body {
+			font-family: "Open Sans", sans-serif;
+			color: #fff;
+			font-weight: 600;
+			background-color: #191A1F;
+}
+
+header {
+			position: fixed;
+			top: 0;
+			bottom: unset;
+			left: 0;
+			right: 0;
+			height: 75px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 24px;
+}
+header .avatar {
+			width: 36px;
+			height: 36px;
+}
+
+.content {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: none;
+			overflow-y: auto;
+			margin: 75px 0 60px;
+			padding: 0 24px;
+}
+
+nav {
+			position: fixed;
+			top: none;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin: 24px;
+			border-radius: 16px;
+			background-color: #262A35;
+}
+
+.welcome {
+			font-weight: 400;
+}
+.welcome .text {
+			font-size: 12px;
+			opacity: 0.5;
+}
+.welcome .big-text {
+			font-size: 24px;
+}
+
+.gamers {
+			padding: 16px;
+			margin: 20px 0;
+			font-weight: 400;
+			border-radius: 16px;
+			background-color: #262A35;
+}
+.gamers .account {
+			display: flex;
+			align-items: center;
+			margin-bottom: 150px;
+}
+.gamers .account .avatar {
+			margin-right: 12px;
+}
+.gamers .account .text .name {
+			font-size: 18px;
+}
+.gamers .account .text .games {
+			font-size: 14px;
+			opacity: 0.5;
+}
+.gamers .gamers-info .text {
+			margin-bottom: 10px;
+}
+.gamers .gamers-info .text:last-child {
+			margin-bottom: 0;
+}
+
+.buttons {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+}
+.buttons button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			margin-right: 24px;
+			cursor: pointer;
+			border: 0;
+			border-radius: 50%;
+			background-color: #262A35;
+}
+.buttons button.btn-big {
+			width: 48px;
+			height: 48px;
+}
+.buttons button:last-child {
+			margin-right: 0;
+}
