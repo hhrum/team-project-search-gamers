@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {margin: 0;}
 // Переменные
 $main-p: 24px;
 $head-h: 75px;
-$nav-h: 60px;
+$nav-h: 100px;
 
 $main-fz: 16px;
 $small-fz: 12px;
@@ -37,6 +37,12 @@ $content-bg: #262A35;
    height: $h;
 }
 
+@mixin avatar($wh, $mr) {
+   width: $wh;
+   height: $wh;
+   margin-right: $mr;
+}
+
 
 body {
    font-family: 'Open Sans', sans-serif;
@@ -51,22 +57,31 @@ header {
    @include pos-fixed(0, unset, $head-h);
    @include flexing(space-between);
    padding: $main-p;
+
+   .text {
+      font-size: 24px;
+   }
    
    .avatar {
-      width: 36px;
-      height: 36px;
+      @include avatar(36px, unset);
    }
 }
 
 .content {
-   @include pos-fixed(0, 0, none);
+   @include pos-fixed(0, 0, unset);
    overflow-y: auto;
-   margin: $head-h 0 $nav-h;
-   padding: 0 $main-p;
+   margin: $head-h $main-p $nav-h;
+
+   &.content-messages {
+      padding: 16px;
+
+      border-radius: 16px;
+      background-color: $content-bg;
+   }
 }
 
 nav {
-   @include pos-fixed(none, 0, $nav-h);
+   @include pos-fixed(unset, 0, $nav-h - 40px);  // Чота лень разбираться по другому, сделал так :)
    @include flexing(space-around);
    margin: 24px;
 
@@ -99,12 +114,11 @@ nav {
    background-color: $content-bg;
 
    .account {
-      display: flex;
-      align-items: center;
+      @include flexing(unset);
       margin-bottom: 150px;
 
       .avatar {
-         margin-right: 12px;
+         @include avatar(48px, 12px)
       }
 
       .text {
@@ -155,5 +169,29 @@ nav {
       &:last-child {
          margin-right: 0;
       }
+   }
+}
+
+
+
+// Messages
+
+.message {
+   @include flexing(unset);
+   margin-bottom: 16px;
+
+   .avatar {
+      @include avatar(48px, 12px);
+   }
+
+   .text {
+      .message-content {
+         font-size: 14px;
+         opacity: .5;
+      }
+   }
+
+   &:last-child {
+      margin-bottom: 0;
    }
 }

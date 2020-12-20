@@ -27,9 +27,13 @@ header {
 			justify-content: space-between;
 			padding: 24px;
 }
+header .text {
+			font-size: 24px;
+}
 header .avatar {
 			width: 36px;
 			height: 36px;
+			margin-right: unset;
 }
 
 .content {
@@ -38,15 +42,19 @@ header .avatar {
 			bottom: 0;
 			left: 0;
 			right: 0;
-			height: none;
+			height: unset;
 			overflow-y: auto;
-			margin: 75px 0 60px;
-			padding: 0 24px;
+			margin: 75px 24px 100px;
+}
+.content.content-messages {
+			padding: 16px;
+			border-radius: 16px;
+			background-color: #262A35;
 }
 
 nav {
 			position: fixed;
-			top: none;
+			top: unset;
 			bottom: 0;
 			left: 0;
 			right: 0;
@@ -80,9 +88,12 @@ nav {
 .gamers .account {
 			display: flex;
 			align-items: center;
+			justify-content: unset;
 			margin-bottom: 150px;
 }
 .gamers .account .avatar {
+			width: 48px;
+			height: 48px;
 			margin-right: 12px;
 }
 .gamers .account .text .name {
@@ -122,4 +133,23 @@ nav {
 }
 .buttons button:last-child {
 			margin-right: 0;
+}
+
+.message {
+			display: flex;
+			align-items: center;
+			justify-content: unset;
+			margin-bottom: 16px;
+}
+.message .avatar {
+			width: 48px;
+			height: 48px;
+			margin-right: 12px;
+}
+.message .text .message-content {
+			font-size: 14px;
+			opacity: 0.5;
+}
+.message:last-child {
+			margin-bottom: 0;
 }
