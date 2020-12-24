@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Edit</title>
+
+   <link rel="stylesheet" href="/css/style.min.css">
+</head>
+
+<body>
+   <header class="header">
+      <div class="header__text">Редактирование</div>
+      <img class="header__avatar" src="/img/avatar.png" alt="">
+   </header>
+
+   <div class="content">
+
+      <div class="edit">
+         <div class="edit__avatar">
+            <img src="/img/avatar.png" alt="">
+            <button>Изменить аватар</button>
+         </div>
+
+         <div class="edit__text">Поменять имя:</div>
+         <input class="edit__input" type="text" placeholder="Имя пользователя">
+
+         <div class="edit__text">Поменять статус:</div>
+         <input class="edit__input" type="text" placeholder="Статус пользователя">
+
+      </div>
+
+   </div>
+
+   @@include('_nav.html')
+
+   <script src="/js/script.min.js"></script>
+</body>
+
+</html>
