@@ -28,8 +28,9 @@
       <button class="profile-btn"><a href="edit.html">Редактировать</a></button>
 
       <div class="preferred-games">
-         <div class="preferred-games__text">Предпочитаемые игры</div>
+         <div class="preferred-games__title">Предпочитаемые игры</div>
          <div class="profile-games">
+
             <img src="/img/avatar.png" alt="">
             <img src="/img/avatar.png" alt="">
             <img src="/img/avatar.png" alt="">
@@ -38,23 +39,48 @@
             <img src="/img/avatar.png" alt="">
             <img src="/img/avatar.png" alt="">
             <img src="/img/avatar.png" alt="">
+
          </div>
       </div>
 
       <div class="stats-games">
-         <div class="stats-games__text">Статистика по играм</div>
+         <div class="stats-games__title">Статистика по играм</div>
          <div class="profile-games">
-            <div class="item active">Game</div>
-            <div class="item">Game</div>
-            <div class="item">Game</div>
-            <div class="item">Game</div>
-            <div class="item">Game</div>
-            <div class="item">Game</div>
+
+            <button class="profile-games__item" type="button" data-tab="#tab_1">Game</button>
+            <button class="profile-games__item" type="button" data-tab="#tab_2">Game</button>
+            <button class="profile-games__item" type="button" data-tab="#tab_3">Game</button>
+            <button class="profile-games__item" type="button" data-tab="#tab_4">Game</button>
+            <button class="profile-games__item" type="button" data-tab="#tab_5">Game</button>
+
          </div>
 
-         <div class="stats-games__stat">526 часов</div>
-         <div class="stats-games__stat">80% точность</div>
-         <div class="stats-games__stat">1.2 КД</div>
+         <div class="stats-games__content" id="tab_1">
+            <div class="stats-games__text">526 часов</div>
+            <div class="stats-games__text">80% Точность</div>
+            <div class="stats-games__text">1.2 КД</div>
+         </div>
+         <div class="stats-games__content" id="tab_2">
+            <div class="stats-games__text">324 часов</div>
+            <div class="stats-games__text">34% Точность</div>
+            <div class="stats-games__text">0.5 КД</div>
+         </div>
+         <div class="stats-games__content" id="tab_3">
+            <div class="stats-games__text">11123 часов</div>
+            <div class="stats-games__text">110% Точность</div>
+            <div class="stats-games__text">200 КД</div>
+         </div>
+         <div class="stats-games__content" id="tab_4">
+            <div class="stats-games__text">1 часов</div>
+            <div class="stats-games__text">1% Точность</div>
+            <div class="stats-games__text">0.1 КД</div>
+         </div>
+         <div class="stats-games__content" id="tab_5">
+            <div class="stats-games__text">4343 часов</div>
+            <div class="stats-games__text">12312% Точность</div>
+            <div class="stats-games__text">300 КД</div>
+         </div>
+
       </div>
 
    </div>

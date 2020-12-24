@@ -1,6 +1,6 @@
 // Tabs
-const tabsBtn = document.querySelectorAll(".tabs__btn");
-const tabsItems = document.querySelectorAll(".tabs__item");
+const tabsBtn = document.querySelectorAll(".profile-games__item");
+const tabsItems = document.querySelectorAll(".stats-games__content");
 
 function onTabClick(item) {
    item.addEventListener("click", function () {
@@ -8,16 +8,16 @@ function onTabClick(item) {
       let tabId = currentBtn.getAttribute("data-tab");
       let currentTab = document.querySelector(tabId);
 
-      if (!currentBtn.classList.contains('active-tabs__btn')) {
+      if (!currentBtn.classList.contains('profile-games__item-active')) {
          tabsBtn.forEach(function (item) {
-            item.classList.remove('active-tabs__btn');
+            item.classList.remove('profile-games__item-active');
          });
 
          tabsItems.forEach(function (item) {
             item.classList.remove('active');
          });
 
-         currentBtn.classList.add('active-tabs__btn');
+         currentBtn.classList.add('profile-games__item-active');
          currentTab.classList.add('active');
       }
 
@@ -26,4 +26,4 @@ function onTabClick(item) {
 
 tabsBtn.forEach(onTabClick);
 
-document.querySelector('.tabs__btn').click();
+document.querySelector('.profile-games__item').click();

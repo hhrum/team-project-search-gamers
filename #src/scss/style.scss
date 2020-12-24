@@ -228,25 +228,36 @@ nav {
       @include avatar(48px, 12px);
    }
 
-   .item {
+   &__item {
       padding: 8px 16px;
       border-radius: 32px;
 
-      &.active {
+      background-color: unset;
+
+      &-active {
+         border-radius: 32px;
          background: $content-bg;
       }
    }
 }
 
 .stats-games {
-   &__stat {
+   &__content {
+      display: none;
+
+      &.active {
+         display: block;
+      }
+   }
+
+   &__text {
       font-weight: 400;
       margin-bottom: 12px;
    }
 }
 
 
-// Edit
+//* Edit
 .edit {
    &__avatar {
       @include flexing(unset);

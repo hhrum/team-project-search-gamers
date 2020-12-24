@@ -1,1 +1,1 @@
-// @@include('anchours.js')
+@@include('tabs.js')
