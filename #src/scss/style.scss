@@ -25,7 +25,7 @@ $head-h: 75px;
 $nav-h: 100px;
 
 $main-bg: #191A1F;
-$content-bg: #262A35;
+$content-bg: rgba(38, 42, 53, .7);;
 
 $ff: 'OpenSans';
 $fw: 600;
@@ -43,7 +43,9 @@ body {
    font-size: $fz;
    color: $text-color;
 
-   background-color: $main-bg;
+   background: $main-bg;
+   
+   background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
 }
 
 // .container {
@@ -71,12 +73,13 @@ body {
    @include pos-fixed(0, 0, unset);
    overflow-y: auto;
    margin: $head-h $main-p $nav-h;
+   
 
    &.content-messages {
       padding: 16px;
 
       border-radius: 16px;
-      background-color: $content-bg;
+      background: $content-bg;
    }
 }
 
@@ -86,7 +89,7 @@ nav {
    margin: $main-p;
 
    border-radius: 16px;
-   background-color: $content-bg;
+   background: $content-bg;
 }
 // =========================================
 
@@ -110,7 +113,7 @@ nav {
    font-weight: 400;
 
    border-radius: 16px;
-   background-color: $content-bg;
+   background: $content-bg;
 
    .account-gamers {
       @include flexing(unset);
@@ -153,7 +156,7 @@ nav {
       margin-right: 24px;
 
       border-radius: 50%;
-      background-color: $content-bg;
+      background: $content-bg;
 
       &.btn-big {
          width: 48px;
@@ -213,7 +216,7 @@ nav {
    margin: 16px 0 24px;
 
    border-radius: 8px;
-   background-color: $content-bg;
+   background: $content-bg;
 }
 
 .profile-games {
@@ -230,7 +233,7 @@ nav {
       border-radius: 32px;
 
       &.active {
-         background-color: $content-bg;
+         background: $content-bg;
       }
    }
 }
