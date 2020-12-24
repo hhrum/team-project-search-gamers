@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile</title>
+
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   @@include('_header.html')
+
+   <div class="content">
+
+      <div class="profile-info">
+         <img class="profile-info__avatar" src="img/avatar.png" alt="">
+         <div class="profile-info__text">
+            <div class="profile-info__name">Имя пользователя</div>
+            <div class="profile-info__status">Статус пользователя</div>
+         </div>
+      </div>
+
+      <button class="profile-btn">Редактировать</button>
+
+      <div class="preferred-games">
+         <div class="preferred-games__text">Предпочитаемые игры</div>
+         <div class="profile-games">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" alt="">
+         </div>
+      </div>
+
+      <div class="stats-games">
+         <div class="stats-games__text">Статистика по играм</div>
+         <div class="profile-games">
+            <div class="item active">Game</div>
+            <div class="item">Game</div>
+            <div class="item">Game</div>
+            <div class="item">Game</div>
+            <div class="item">Game</div>
+            <div class="item">Game</div>
+         </div>
+
+         <div class="stats-games__stat">526 часов</div>
+         <div class="stats-games__stat">80% точность</div>
+         <div class="stats-games__stat">1.2 КД</div>
+      </div>
+
+   </div>
+
+   @@include('_nav.html')
+
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>

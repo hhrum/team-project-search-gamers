@@ -1,0 +1,243 @@
+//* Работа со шрифтами
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+
+@import "fonts";
+@import "nullstyle";
+@import "mixins";
+// =======================================
+
+// Переменные ===================================
+// $mw: 1200px;  //? Container weight
+// $md1: $mw + 30px;
+// $md2: 991px;
+// $md3: 767px;
+// $md4: 479px;
+$main-p: 24px;
+$head-h: 75px;
+$nav-h: 100px;
+
+$main-bg: #191A1F;
+$content-bg: #262A35;
+
+$ff: 'OpenSans';
+$fw: 600;
+$fz: 16px;
+
+$text-color: #fff;
+// $red-color: #e84545;
+// $btn-color: #e84545;
+// ===============================================
+
+// Общие стили =======================
+body {
+   font-family: $ff;
+   font-weight: $fw;
+   font-size: $fz;
+   color: $text-color;
+
+   background-color: $main-bg;
+}
+
+// .container {
+//    width: 100%;
+//    max-width: $mw;
+//    margin: 0 auto;
+//    padding: 0 15px;
+// }
+
+.header {
+   @include pos-fixed(0, unset, $head-h);
+   @include flexing(space-between);
+   padding: $main-p;
+
+   &__text {
+      font-size: 24px;
+   }
+   
+   &__avatar {
+      @include avatar(36px, unset);
+   }
+}
+
+.content {
+   @include pos-fixed(0, 0, unset);
+   overflow-y: auto;
+   margin: $head-h $main-p $nav-h;
+
+   &.content-messages {
+      padding: 16px;
+
+      border-radius: 16px;
+      background-color: $content-bg;
+   }
+}
+
+nav {
+   @include pos-fixed(unset, 0, $nav-h - 40px);  // Чота лень разбираться по другому, сделал так :)
+   @include flexing(space-around);
+   margin: $main-p;
+
+   border-radius: 16px;
+   background-color: $content-bg;
+}
+// =========================================
+
+//* Homepage
+.welcome {
+   font-weight: 400;
+
+   &__text {
+      font-size: 12px;
+      opacity: .5;
+   }
+   &__big-text {
+      font-size: 24px;
+   }
+}
+
+.gamers {
+   padding: 16px;
+   margin: 20px 0;
+
+   font-weight: 400;
+
+   border-radius: 16px;
+   background-color: $content-bg;
+
+   .account-gamers {
+      @include flexing(unset);
+      margin-bottom: 150px;
+
+      &__avatar {
+         @include avatar(48px, 12px)
+      }
+
+      &__name {
+         font-size: 18px;
+      }
+
+      &__games {
+         font-size: 14px;
+         opacity: .5;
+      }
+      
+   }
+
+   .gamers-info {
+      &__text {
+         margin-bottom: 10px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+
+      }
+   }
+}
+
+.buttons {
+   @include flexing(center);
+
+   button {
+      @include flexing(center);
+      width: 40px;
+      height: 40px;
+      margin-right: 24px;
+
+      border-radius: 50%;
+      background-color: $content-bg;
+
+      &.btn-big {
+         width: 48px;
+         height: 48px;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+
+//* Messages
+.message {
+   @include flexing(unset);
+   margin-bottom: 16px;
+
+   &__avatar {
+      @include avatar(48px, 12px);
+   }
+
+   &__content {
+      font-size: 14px;
+      opacity: .5;
+   }
+   
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+
+//* Profile
+.profile-info {
+   @include flexing(unset);
+
+   &__avatar {
+      @include avatar(56px, 16px)
+   }
+
+   &__name {
+      font-size: 18px;
+   }
+
+   &__status {
+      font-size: 12px;
+      font-weight: 300;
+      opacity: .5;
+   }
+   
+}
+
+.profile-btn {
+   width: 100%;
+   padding: 12px 0;
+   margin: 16px 0 24px;
+
+   border-radius: 8px;
+   background-color: $content-bg;
+}
+
+.profile-games {
+   display: flex;
+   overflow-x: auto;
+   padding: 16px 0 24px;
+   
+   img {
+      @include avatar(48px, 12px);
+   }
+
+   .item {
+      padding: 8px 16px;
+      border-radius: 32px;
+
+      &.active {
+         background-color: $content-bg;
+      }
+   }
+}
+
+.stats-games {
+   &__stat {
+      font-weight: 400;
+      margin-bottom: 12px;
+   }
+}

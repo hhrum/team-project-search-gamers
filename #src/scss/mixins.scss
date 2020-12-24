@@ -1,0 +1,43 @@
+//* Миксины
+// TODO: это нужно с опытом подкидать, пока пусть тут будет
+// @mixin btn ($pw) {
+//    display: inline-block;
+//    padding: 15px $pw;
+
+//    border-radius: 3px;
+//    background-color: $btn-color;
+
+//    transition: background-color .2s linear;
+   
+//    &:hover {
+//       background-color: #b33d3d;
+//    }
+// }
+
+
+@mixin flexing ($jc: center) {
+   display: flex;
+   align-items: center;
+   justify-content: $jc;
+}
+
+@mixin pos-fixed ($t, $b, $h) {
+   position:fixed;
+   top:$t;
+   bottom: $b;
+   left:0;
+   right:0;
+   height: $h;
+}
+
+@mixin pseudo ($display: block, $pos: absolute, $content: ''){
+   content: $content;
+   display: $display;
+   position: $pos;
+ }
+
+@mixin avatar($wh, $mr) {
+   width: $wh;
+   height: $wh;
+   margin-right: $mr;
+}

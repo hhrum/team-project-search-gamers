@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Homepage</title>
+</head>
+
+<body>
+   @@include('_header.html')
+
+   <div class="content">
+
+      <div class="welcome">
+         <div class="welcome__text">Привет, Пользователь!</div>
+         <div class="welcome__big-text">Время оценивать</div>
+      </div>
+
+      <div class="gamers">
+
+         <div class="account-gamers">
+            <img class="account-gamers__avatar" src="img/avatar.png" alt="">
+            <div class="account-gamers__text">
+               <div class="account-gamers__name">Артес</div>
+               <div class="account-gamers__games">WoW, LoL</div>
+            </div>
+         </div>
+
+         <div class="gamers-info">
+            <div class="gamers-info__text">526 часов</div>
+            <div class="gamers-info__text">80% точность</div>
+            <div class="gamers-info__text">1.2 КД</div>
+            <div class="gamers-info__text">Дискорд есть</div>
+         </div>
+
+      </div>
+
+      <div class="buttons">
+         <button><img src="img/close-icon.svg" alt=""></button>
+         <button class="btn-big"><img src="img/gamepad-icon.svg" alt=""></button>
+         <button><img src="img/like-icon.svg" alt=""></button>
+      </div>
+   </div>
+
+   @@include('_nav.html')
+
+   <script src="js/script.min.js"></script>
+</body>
+
+</html>
