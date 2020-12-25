@@ -164,10 +164,6 @@ nav {
          opacity: .5;
       }
 
-      &--liked {
-         padding: 0 0 100% 0;
-      }
-
       &__liked {
          position: absolute;
          top: 0;
@@ -346,10 +342,3 @@ nav {
    }
    
 }
-
-//* Liked
-// .liked {
-//    display: flex;
-//    width: 100%;
-//    overflow-x: auto;
-// }
