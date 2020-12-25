@@ -82,7 +82,9 @@ body {
    margin: $head-h $main-p $nav-h;
    
    &.content-homepage {
-      overflow-y: unset;
+      overflow-y: hidden;
+      display: flex;
+      flex-direction: column;
    }
 
    &.content-messages {
@@ -119,26 +121,30 @@ nav {
 }
 
 .gamers {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   
    margin: 20px 0;
 
    font-weight: 400;
 
    border-radius: 16px;
    background: $content-bg;
-   
    box-shadow: $main-shadow;
 
    .account-gamers {
+      flex-grow: 1;
       position: relative;
-      padding: 0 0 80% 0;
 
       &__avatar {
          border-top-left-radius: 16px; border-top-right-radius: 16px;
          width: 100%;
          height: 100%;
-         object-fit: cover;
          position: absolute;
          top: 0;
+         right: 0;
+         bottom: 0;
          left: 0;
       }
 
@@ -181,6 +187,7 @@ nav {
          margin-bottom: 10px;
       }
    }
+
 }
 
 .buttons {
@@ -311,6 +318,7 @@ nav {
 
          border-radius: 8px;
          background: $content-bg;
+         box-shadow: $main-shadow;
       }
    }
 
@@ -327,6 +335,21 @@ nav {
 
       border-radius: 8px;
       background: $content-bg;
+      box-shadow: inset 0 2px 10px 1px rgba(0,0,0,.3), inset 0 0 0 60px rgba(0,0,0,.3), 0 1px rgba(255,255,255,.03);
+
+      transition: .3s linear;
+
+      &:focus {
+         outline: none;
+         box-shadow: inset 0 1px 3px 1px  rgba(0,0,0,.5), inset 0 0 0 60px rgba(0,0,0,0), 0 1px rgba(255,255,255,.03);
+       }
    }
    
 }
+
+//* Liked
+// .liked {
+//    display: flex;
+//    width: 100%;
+//    overflow-x: auto;
+// }
