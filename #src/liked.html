@@ -6,29 +6,30 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="/css/style.min.css">
-   <title>Homepage</title>
+   <title>Liked</title>
 </head>
 
 <body>
    <header class="header">
-      <img class="header__icon" src="/img/like-icon.svg" alt="">
+      <button class="header__btn"><a href="homepage.html">back</a></button>
       <img class="header__avatar" src="/img/avatar.png" alt="">
    </header>
 
    <div class="content content-homepage">
 
       <div class="welcome">
-         <div class="welcome__text">Привет, Пользователь!</div>
-         <div class="welcome__big-text">Время оценивать</div>
+         <div class="welcome__big-text">Твой выбор</div>
       </div>
 
       <div class="gamers">
 
-         <div class="account-gamers">
+         <div class="account-gamers account-gamers--liked">
             <img class="account-gamers__avatar" src="/img/user-img.jpg" alt="">
+            <div class="account-gamers__liked"><img src="img/gamepad-icon.svg" alt=""></div>
+
             <div class="account-gamers__text">
                <div class="account-gamers__name">Артес</div>
-               <div class="account-gamers__games">WoW</div>
+               <div class="account-gamers__games">WoW, LoL</div>
             </div>
          </div>
 
@@ -42,11 +43,6 @@
 
       </div>
 
-      <div class="buttons">
-         <button><img src="/img/close-icon.svg" alt=""></button>
-         <button class="btn-big"><a href="liked.html"><img src="/img/gamepad-icon.svg" alt=""></a></button>
-         <button><img src="/img/like-icon.svg" alt=""></button>
-      </div>
    </div>
 
    @@include('_nav.html')

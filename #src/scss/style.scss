@@ -25,7 +25,8 @@ $head-h: 75px;
 $nav-h: 100px;
 
 $main-bg: #191A1F;
-$content-bg: rgba(38, 42, 53, .7);;
+$content-bg: rgba(38, 42, 53, .7);
+$main-shadow: 0 0 10px rgba(0,0,0,0.5);
 
 $ff: 'OpenSans';
 $fw: 600;
@@ -63,6 +64,12 @@ body {
    &__text {
       font-size: 24px;
    }
+
+   &__btn {
+      background: $content-bg;
+      padding: 5px 20px;
+      box-shadow: -2px -2px white, -5px -5px #E51C81, 2px 2px white, 5px 5px #14C981;
+   }
    
    &__avatar {
       @include avatar(36px, unset);
@@ -74,12 +81,16 @@ body {
    overflow-y: auto;
    margin: $head-h $main-p $nav-h;
    
+   &.content-homepage {
+      overflow-y: unset;
+   }
 
    &.content-messages {
       padding: 16px;
 
       border-radius: 16px;
       background: $content-bg;
+      box-shadow: $main-shadow;
    }
 }
 
@@ -90,6 +101,7 @@ nav {
 
    border-radius: 16px;
    background: $content-bg;
+   box-shadow: $main-shadow;
 }
 // =========================================
 
@@ -114,15 +126,22 @@ nav {
    border-radius: 16px;
    background: $content-bg;
    
-   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   box-shadow: $main-shadow;
 
    .account-gamers {
       position: relative;
+      padding: 0 0 80% 0;
 
       &__avatar {
          border-top-left-radius: 16px; border-top-right-radius: 16px;
          width: 100%;
+         height: 100%;
+         object-fit: cover;
+         position: absolute;
+         top: 0;
+         left: 0;
       }
+
       
       &__text {
          position: absolute;
@@ -137,6 +156,17 @@ nav {
       &__games {
          font-size: 14px;
          opacity: .5;
+      }
+
+      &--liked {
+         padding: 0 0 100% 0;
+      }
+
+      &__liked {
+         position: absolute;
+         top: 0;
+         right: 0;
+         padding: 16px;
       }
       
    }
@@ -164,6 +194,7 @@ nav {
 
       border-radius: 50%;
       background: $content-bg;
+      box-shadow: $main-shadow;
 
       &.btn-big {
          width: 48px;
@@ -224,6 +255,7 @@ nav {
 
    border-radius: 8px;
    background: $content-bg;
+   box-shadow: $main-shadow;
 }
 
 .profile-games {
@@ -244,6 +276,7 @@ nav {
       &-active {
          border-radius: 32px;
          background: $content-bg;
+         box-shadow: $main-shadow;
       }
    }
 }
