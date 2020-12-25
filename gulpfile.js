@@ -117,7 +117,7 @@ function images() {
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             interlaced: true,
-            optimizationLevel: 3 // 0 to 7
+            optimizationLevel: 1 // 0 to 7
          })
       )
       .pipe(dest(path.build.img))
