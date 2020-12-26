@@ -68,7 +68,7 @@ body {
    &__btn {
       background: $content-bg;
       padding: 5px 20px;
-      box-shadow: -2px -2px white, -5px -5px #E51C81, 2px 2px white, 5px 5px #14C981;
+      box-shadow: -2px -2px white, -5px -5px #9B51E0, 2px 2px white, 5px 5px #BB6BD9;
    }
    
    &__avatar {
@@ -104,7 +104,19 @@ nav {
    border-radius: 16px;
    background: $content-bg;
    box-shadow: $main-shadow;
+
+   object{pointer-events:none;}
 }
+
+.mess path{
+   fill: #E51C81;
+   stroke: #E51C81;
+}
+.mess polygon{
+   fill: #E51C81;
+   stroke: #E51C81;
+}
+
 // =========================================
 
 //* Homepage
@@ -142,6 +154,7 @@ nav {
          width: 100%;
          height: 100%;
          position: absolute;
+         object-fit: cover;
          top: 0;
          right: 0;
          bottom: 0;
@@ -166,9 +179,8 @@ nav {
 
       &__liked {
          position: absolute;
-         top: 0;
-         right: 0;
-         padding: 16px;
+         top: 16px;
+         right: 16px;
       }
       
    }
@@ -182,6 +194,11 @@ nav {
          width: 50%;
          margin-bottom: 10px;
       }
+   }
+
+   &--liked {
+      min-width: 100%;
+      margin-right: 24px;
    }
 
 }
@@ -341,4 +358,12 @@ nav {
        }
    }
    
+}
+
+
+//* Liked
+.liked {
+   display: flex;
+   overflow-x: auto;
+   height: 100%;
 }
