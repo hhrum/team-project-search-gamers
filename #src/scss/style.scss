@@ -39,6 +39,7 @@ $text-color: #fff;
 
 // Общие стили =======================
 
+//! Скролл
 ::-webkit-scrollbar {
    width: 0;
 }
@@ -70,6 +71,7 @@ body {
       font-size: 24px;
    }
 
+   //! Почему-то перестала работать :(
    &__btn {
       background: $content-bg;
       padding: 5px 20px;
@@ -90,6 +92,10 @@ body {
       overflow-y: hidden;
       display: flex;
       flex-direction: column;
+
+      // Решение проблемы с тенью
+      margin: unset;
+      padding: $head-h $main-p $nav-h;
    }
 
    &.content-messages {

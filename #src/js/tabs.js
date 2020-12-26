@@ -26,4 +26,6 @@ function onTabClick(item) {
 
 tabsBtn.forEach(onTabClick);
 
+//! Проблема из-за этого, но хз почему >:[
+//? PS: Когда подключаю отедльно эти скрипты, то все работает 
 document.querySelector('.profile-games__item').click();
