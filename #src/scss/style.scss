@@ -38,6 +38,11 @@ $text-color: #fff;
 // ===============================================
 
 // Общие стили =======================
+
+::-webkit-scrollbar {
+   width: 0;
+}
+
 body {
    font-family: $ff;
    font-weight: $fw;
@@ -365,5 +370,21 @@ nav {
 .liked {
    display: flex;
    overflow-x: auto;
+   // запрещает скролл
+   overflow: hidden;
    height: 100%;
+
+   &__item {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      
+      min-width: 100%;
+      margin-right: 24px;
+      
+   }
+
+   &__btn {
+
+   }
 }
