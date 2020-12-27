@@ -100,6 +100,17 @@ body {
       border-radius: 16px;
       background: $content-bg;
       box-shadow: $main-shadow;
+
+      &::-webkit-scrollbar {
+         width: 3px;
+         
+         
+      }
+
+      &::-webkit-scrollbar-thumb {
+         background: linear-gradient(to bottom, #9B51E0,#6476CC);
+         border-radius: 10px;
+      }
    }
 }
 
@@ -250,9 +261,16 @@ nav {
       @include avatar(48px, 12px);
    }
 
+   &__text {
+      white-space: nowrap;
+      overflow: hidden;
+   }
+
    &__content {
       font-size: 14px;
       opacity: .5;
+      text-overflow: ellipsis;
+      overflow: hidden;
    }
    
    &:last-child {
