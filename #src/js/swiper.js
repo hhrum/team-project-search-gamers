@@ -14,10 +14,10 @@ function scrollTo(e) {
 
 var initialPoint;
 var finalPoint;
-document.addEventListener('touchstart', function (event) {
+wrapper.addEventListener('touchstart', function (event) {
    initialPoint = event.changedTouches[0];
 }, false);
-document.addEventListener('touchend', function (event) {
+wrapper.addEventListener('touchend', function (event) {
    finalPoint = event.changedTouches[0];
    var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
    var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);

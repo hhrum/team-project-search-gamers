@@ -73,6 +73,7 @@ body {
 
    //! Почему-то перестала работать :(
    &__btn {
+      z-index: 2;
       background: $content-bg;
       padding: 5px 20px;
       box-shadow: -2px -2px white, -5px -5px #9B51E0, 2px 2px white, 5px 5px #BB6BD9;
@@ -84,18 +85,14 @@ body {
 }
 
 .content {
-   @include pos-fixed(0, 0, unset);
+   @include pos-fixed($head-h, $nav-h, unset);
    overflow-y: auto;
-   margin: $head-h $main-p $nav-h;
+   margin: 0 24px;
    
    &.content-homepage {
       overflow-y: hidden;
       display: flex;
       flex-direction: column;
-
-      // Решение проблемы с тенью
-      margin: unset;
-      padding: $head-h $main-p $nav-h;
    }
 
    &.content-messages {
@@ -388,9 +385,5 @@ nav {
       min-width: 100%;
       margin-right: 24px;
       
-   }
-
-   &__btn {
-
    }
 }
