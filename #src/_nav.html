@@ -1,5 +1,20 @@
+@@include('_svg.html')
 <nav>
-   <a href="/index.html"><object class="home" type="image/svg+xml" data="img/Icon-Main-Page.svg"></object></a>
-   <a href="/messages.html"><object class="mess" type="image/svg+xml" data="img/message-icon.svg"></object></a>
-   <a href="/profile.html"><object class="prof" type="image/svg+xml" data="img/user-icon.svg"></object></a>
+   <a href="/index.html">
+      <svg class="icon home">
+         <use xlink:href='#icon-homepage'></use>
+      </svg>
+   </a>
+
+   <a href="/messages.html">
+      <svg class="icon mess">
+         <use xlink:href='#icon-message'></use>
+      </svg>
+   </a>
+
+   <a href="/profile.html">
+      <svg class="icon prof">
+         <use xlink:href='#icon-profile'></use>
+      </svg>
+   </a>
 </nav>

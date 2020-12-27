@@ -51,7 +51,7 @@ body {
    color: $text-color;
 
    background: $main-bg;
-   }
+}
 
 // .container {
 //    width: 100%;
@@ -113,15 +113,26 @@ nav {
    box-shadow: $main-shadow;
 
    object{pointer-events:none;}
-}
 
-.mess path{
-   fill: #E51C81;
-   stroke: #E51C81;
-}
-.mess polygon{
-   fill: #E51C81;
-   stroke: #E51C81;
+   .icon {
+      fill: #fff;
+   }
+
+   .home {
+      width: 23px;
+      max-height: 28px;
+   }
+
+   .mess{
+      width: 24px;
+      max-height: 22px;
+   }
+
+   .prof {
+      width: 25px;
+      max-height: 24px;
+   }
+
 }
 
 // =========================================
