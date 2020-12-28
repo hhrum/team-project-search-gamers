@@ -81,9 +81,36 @@ body {
       padding: 5px 20px;
       box-shadow: -2px -2px white, -5px -5px #9B51E0, 2px 2px white, 5px 5px #BB6BD9;
    }
+
+   &__back-arr {
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+
+      background-color: #fff;
+
+      & span:before {
+         @include pseudo;
+         width: 10px;
+         height: 2px;
+         transform: rotate(-45deg);
+         transform-origin: left bottom;
+         background-color: #fff;
+      }
+
+      & span:after {
+         @include pseudo;
+         width: 10px;
+         height: 2px;
+         transform: rotate(45deg);
+         transform-origin: left top;
+         background-color: #fff;
+      }
+   }
    
    &__avatar {
-      @include avatar(36px, unset);
+      @include avatar(36px);
    }
 }
 
@@ -101,7 +128,7 @@ body {
       padding: 0 $main-p;
    }
 
-   &.content-messages {
+   &.content-dialogs {
       padding: 16px;
 
       border-radius: 16px;
@@ -116,6 +143,10 @@ body {
          background: linear-gradient(to bottom, #9B51E0,#6476CC);
          border-radius: 10px;
       }
+   }
+
+   &.content-message {
+      @include pos-fixed($head-h, 0, unset);
    }
 }
 
@@ -271,8 +302,8 @@ nav {
 }
 
 
-//* Messages
-.message {
+//* Dialogs
+.dialog {
    @include flexing(unset);
    margin-bottom: 16px;
 
@@ -426,5 +457,51 @@ nav {
       min-width: 100%;
       margin-right: 24px;
       
+   }
+}
+
+
+//* Message
+.message-header {
+
+   &__content {
+      display: flex;
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: 8px;
+   }
+
+   &__title {
+      font-size: 14px;
+      font-weight: 400;
+   }
+
+   &__subtitle {
+      font-size: 12px;
+      font-weight: 300;
+      opacity: .5;
+   }
+
+   &__avatar {
+      @include avatar(36px);
+   }
+}
+
+.message {
+   &__content {
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      bottom: 0;
+   }
+   &__sms {
+      flex: 0 1 auto;
+      max-width: 60%;
+      background-color: $content-bg;
+      border-radius: 16px;
    }
 }
