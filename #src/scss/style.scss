@@ -12,6 +12,7 @@
 @import "fonts";
 @import "nullstyle";
 @import "mixins";
+@import "animations";
 // =======================================
 
 // Переменные ===================================
@@ -256,11 +257,15 @@ nav {
       }
 
       &:first-child {
-         background: linear-gradient(90deg, rgba(231,76,60,1) 20%, rgba(155,81,224,1) 100%);
+         background: linear-gradient(90deg, rgba(231,76,60,1) 30%, rgba(155,81,224,1) 100%);
+         background-size: 300% 300%;
+         animation: gradient 10s ease infinite;
       }
 
       &:last-child {
-         background: linear-gradient(90deg, rgba(155,81,224,1) 25%, rgba(231,76,60,1) 100%);
+         background: linear-gradient(90deg, rgba(155,81,224,1) 30%, rgba(231,76,60,1) 100%);
+         background-size: 300% 300%;
+         animation: gradient 10s ease infinite;
       }
    }
 }
