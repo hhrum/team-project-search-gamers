@@ -8,16 +8,16 @@ function onTabClick(item) {
       let tabId = currentBtn.getAttribute("data-tab");
       let currentTab = document.querySelector(tabId);
 
-      if (!currentBtn.classList.contains('profile-games__item-active')) {
+      if (!currentBtn.classList.contains('active')) {
          tabsBtn.forEach(function (item) {
-            item.classList.remove('profile-games__item-active');
+            item.classList.remove('active');
          });
 
          tabsItems.forEach(function (item) {
             item.classList.remove('active');
          });
 
-         currentBtn.classList.add('profile-games__item-active');
+         currentBtn.classList.add('active');
          currentTab.classList.add('active');
       }
 

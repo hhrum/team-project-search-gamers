@@ -70,6 +70,8 @@ body {
       font-size: 24px;
       
       background: linear-gradient(to right, #9d50bb, #6e48aa);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
    }
@@ -108,8 +110,6 @@ body {
 
       &::-webkit-scrollbar {
          width: 3px;
-         
-         
       }
 
       &::-webkit-scrollbar-thumb {
@@ -257,13 +257,13 @@ nav {
       }
 
       &:first-child {
-         background: linear-gradient(90deg, rgba(231,76,60,1) 30%, rgba(155,81,224,1) 100%);
+         background: linear-gradient(90deg, rgba(185, 43, 39, 1) 30%, rgba(21, 101, 192, 1) 100%);
          background-size: 300% 300%;
          animation: gradient 10s ease infinite;
       }
 
       &:last-child {
-         background: linear-gradient(90deg, rgba(155,81,224,1) 30%, rgba(231,76,60,1) 100%);
+         background: linear-gradient(90deg, rgba(21, 101, 192, 1) 30%, rgba(185, 43, 39, 1) 100%);
          background-size: 300% 300%;
          animation: gradient 10s ease infinite;
       }
@@ -343,7 +343,7 @@ nav {
 
       background-color: unset;
 
-      &-active {
+      &.active {
          border-radius: 32px;
          background: $content-bg;
          box-shadow: $main-shadow;
