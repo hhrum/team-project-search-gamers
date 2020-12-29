@@ -88,7 +88,7 @@ body {
       height: 2px;
       position: relative;
 
-      background-color: #fff;
+      background: #fff;
 
       & span:before {
          @include pseudo;
@@ -96,7 +96,7 @@ body {
          height: 2px;
          transform: rotate(-45deg);
          transform-origin: left bottom;
-         background-color: #fff;
+         background: #fff;
       }
 
       & span:after {
@@ -105,7 +105,7 @@ body {
          height: 2px;
          transform: rotate(45deg);
          transform-origin: left top;
-         background-color: #fff;
+         background: #fff;
       }
    }
    
@@ -147,6 +147,9 @@ body {
 
    &.content-message {
       @include pos-fixed($head-h, 0, unset);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
    }
 }
 
@@ -463,7 +466,6 @@ nav {
 
 //* Message
 .message-header {
-
    &__content {
       display: flex;
    }
@@ -492,16 +494,77 @@ nav {
 }
 
 .message {
-   &__content {
-      display: flex;
-      flex-wrap: wrap;
-      position: absolute;
-      bottom: 0;
+   &__body {
+      overflow-y: auto;
    }
-   &__sms {
+   &__content { //Контент самого сообщения
       flex: 0 1 auto;
-      max-width: 60%;
+      max-width: 55%;
+      padding: 8px 16px;
+
+      font-size: 13px;
+      font-weight: 400;
+
+      background: $content-bg;
+      border-radius: 16px;
+   }
+
+   &__time {
+      font-size: 9px;
+      font-weight: 300;
+      opacity: .5;
+   }
+
+   &__sms {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 10px;
+
+      &--from-me {
+         flex-direction: row-reverse;
+      }
+   }
+
+
+   &__input-form {
+      display: flex;
+      justify-content: space-between;
+      margin: $main-p 0;
+   }
+
+   &__input {
+      width: 100%;
+      max-height: 40px;
+      padding: 13.5px 16px;
+      margin-right: 10px;
+
+      font-size: 13px;
+      font-weight: 300;
+
+      background: $content-bg;
+      border-radius: 16px;
+   }
+
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      min-height: 40px;
+
       background-color: $content-bg;
       border-radius: 16px;
+
+      .message-dispatch {
+         fill: #fff;
+         width: 18px;
+         height: 20px;
+
+         transition: fill .1s linear;
+      }
+
+      &:active .message-dispatch{
+         fill: #7B61FF;
+      }
    }
 }

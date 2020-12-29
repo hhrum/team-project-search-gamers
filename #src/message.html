@@ -10,6 +10,8 @@
 </head>
 
 <body>
+   @@include('_svg.html')
+
    <header class="header message-header">
       <a class="header__back-arr" href="dialogs.html"><span></span></a>
       <div class="message-header__content">
@@ -22,15 +24,92 @@
    </header>
 
    <div class="content content-message">
-      <div class="message__content">
+      <div class="message__body">
 
-         <div class="message__sms">
-            Какой-то большой текст
-            ОЧень большой текст
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Какой-то большой текст ОЧень большой текст</div>
+            <div class="message__time">00:00</div>
          </div>
 
-         <div class="message__sms message__sms--my">Texxt</div>
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxtrrrrrrrrrrrrr</div>
+            <div class="message__time">00:00</div>
+         </div>
 
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Какой-то большой текст ОЧень большой текст</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxtrrrrrrrrrrrrr</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Какой-то большой текст ОЧень большой текст</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxtrrrrrrrrrrrrr</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-me">
+            <div class="message__content">Texxt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+         <div class="message__sms message__sms--from-them">
+            <div class="message__content">Textt</div>
+            <div class="message__time">00:00</div>
+         </div>
+
+      </div>
+
+      <div class="message__input-form">
+         <input class="message__input" type="text" placeholder="Введите текст">
+         <button class="message__btn">
+            <svg class="icon message-dispatch">
+               <use xlink:href='#icon-message-dispatch'></use>
+            </svg>
+         </button>
       </div>
 
    </div>
