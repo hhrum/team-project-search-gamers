@@ -498,8 +498,7 @@ nav {
       overflow-y: auto;
    }
    &__content { //Контент самого сообщения
-      flex: 0 1 auto;
-      max-width: 55%;
+      max-width: 60%;
       padding: 8px 16px;
 
       font-size: 13px;
@@ -522,6 +521,7 @@ nav {
 
       &--from-me {
          flex-direction: row-reverse;
+         flex-wrap: wrap;
       }
    }
 
